@@ -1,37 +1,96 @@
 
 
-.home-page {
+.home-page,
+.about-page {
   color: #414142;
   .container {
     align-items: stretch;
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     width: 100%;
+    font-family: $montserrat;
     .heading {
-      font-family: $montserrat;
       font-size: 62px;
       font-weight: bold;
       line-height: 76px;
       margin: auto;
-      margin-top: 270px;
+      max-width: $content-width;
+      text-transform: uppercase;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+    .divider {
+      width: 100%;
+      height: 1px;
+      background-color: #f6f6f8;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+    .subheading {
+      font-size: 43px;
+      margin: auto;
+      max-width: $content-width;
+    }
+    .heading-2 {
+      font-size: 44px;
+      font-weight: bold;
+      margin: auto;
       max-width: $content-width;
       text-transform: uppercase;
     }
-    .subheading {
-      font-family: $montserrat;
-      font-size: 43px;
+    .subheading-2 {
+      font-size: 31px;
       margin: auto;
-      margin-top: 462px;
       max-width: $content-width;
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.8064516129032258;
+    }
+    .capabilities-wrapper {
+      background-color: #eeeeee;
+      margin-top: 166px;
+      margin-left: -20px;
+      margin-right: -20px;
+      padding: 20px;
+      .capabilities-section {
+        margin: auto;
+        margin-bottom: 169px;
+        margin-top: 169px;
+        max-width: $content-width;
+        .title {
+          color: #d0d0d0;
+          font-size: 40px;
+        }
+        .capability-title {
+          font-size: 23px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.6956521739130435;
+          letter-spacing: normal;
+          margin-top: 54px;
+          color: #555557;
+        }
+        .capability-description {
+          font-size: 19px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.631578947368421;
+          letter-spacing: normal;
+          margin-top: 9px;
+          color: #82828a;
+        }
+      }
     }
     .clients-section {
       margin: auto;
-      margin-top: 338px;
       max-width: $content-width;
       .title {
-        font-family: $cantarell;
         font-size: 23px;
         font-weight: bold;
         margin-bottom: 100px;
@@ -41,6 +100,78 @@
         text-align: center;
         .client {
           margin: 25px;
+        }
+      }
+    }
+    .quotes-section {
+      margin: auto;
+      max-width: $content-width;
+      .quote {
+        font-size: 29px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.6206896551724137;
+        letter-spacing: normal;
+        color: #82828a;
+      }
+      .name {
+        font-size: 23px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.6956521739130435;
+        letter-spacing: normal;
+        margin-top: 32px;
+        color: #555557;
+      }
+      .company-name {
+        font-size: 15px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 2.6;
+        letter-spacing: 4.6875px;
+        color: #adadad;
+      }
+    }
+    .work-with-us-wrapper {
+      margin-top: 271px;
+      height: 100vh;
+      padding: 20px;
+      margin-left: -20px;
+      margin-right: -20px;
+      background-color: #414142;
+      display: flex;
+      align-items: center;
+      .work-with-us-section {
+        margin: auto;
+        max-width: $content-width;
+        .title {
+          font-size: 62px;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #656568;
+          text-transform: uppercase;
+          margin-bottom: 78px;
+        }
+        .label-wrapper {
+          display: flex;
+          align-items: center;
+          .label {
+            font-size: 19px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ffffff;
+            margin-right: 13px;
+            text-transform: uppercase;
+          }
         }
       }
     }
@@ -109,46 +240,6 @@
           }
         }
       }
-    }
-  }
-  .following {
-    align-items: center;
-    background-color: #f6f6f8;
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px 76px;
-    width: 100%;
-    .label {
-      color: #82828a;
-      font-family: $montserrat;
-      font-size: 28px;
-      margin-top: 105px;
-    }
-    .big-input {
-      margin-top: 55px;
-      position: relative;
-      input {
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid #d9d9e3;
-        color: #636363;
-        font-family: $montserrat;
-        font-size: 28px;
-        max-width: 600px;
-        text-align: center;
-        width: 100%;
-        &::placeholder {
-          color: #c3c3cb;
-        }
-      }
-      .input-go {
-        position: absolute;
-        right: 0;
-        top: 15px;
-      }
-    }
-    .footer-logo {
-      margin-top: 223px;
     }
   }
 }

@@ -16,7 +16,7 @@ $.fn.inView = function() {
 
 let lastScrollTop = 0;
 
-$(window).scroll((e) => {
+const applyScroll = () => {
   let st = $(window).scrollTop();
   if (st > lastScrollTop){
       // downscroll code
@@ -35,4 +35,12 @@ $(window).scroll((e) => {
       $(element).addClass('active');
     }
   }
+}
+
+$(document).ready(() => {
+  applyScroll();
+})
+
+$(window).scroll((e) => {
+  applyScroll();
 });

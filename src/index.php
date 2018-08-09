@@ -11,9 +11,10 @@
 
 <div class="home-page">
   <div class="container">
-    <div class="heading">We create extraordinary experiences between people and products</div>
+    <div class="heading animate-in__fadeUp animate-once">We create extraordinary experiences between people and products</div>
+    <div class="divider"></div>
     <div class="subheading animate-in__fadeUp animate-once">We've designed medical devices that touched over 2.5 million people's lives.</div>
-    <div class="clients-section">
+    <div class="clients-section" style="margin-top: 338px;">
       <div class="title">Our Clients</div>
       <div class="row animate-once">
         <?php
@@ -56,14 +57,6 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="following">
-    <div class="label">Sign up for Karten Newsletter</div>
-    <div class="big-input">
-      <input class="email" placeholder="email" type="email">
-      <img src="<?php echo get_image('input-go.png') ?>" alt="k:d" class="input-go"></img>
-    </div>
-    <img src="<?php echo get_image('footer-logo.png') ?>" alt="k:d" class="footer-logo"></img>
   </div>
 </div>
 
