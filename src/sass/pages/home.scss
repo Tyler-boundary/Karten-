@@ -1,7 +1,4 @@
-
-
-.home-page,
-.about-page {
+.page {
   color: #414142;
   .container {
     align-items: stretch;
@@ -10,7 +7,6 @@
     max-width: 100%;
     padding: 20px 20px 0 20px;
     width: 100%;
-    font-family: $montserrat;
     .heading {
       font-size: 62px;
       font-weight: bold;

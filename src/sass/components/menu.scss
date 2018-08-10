@@ -1,0 +1,74 @@
+.menu-container {
+  pointer-events: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100000;
+  background-color: #eeeeee;
+  opacity: 0;
+  transition: opacity 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 75px 0 64px;
+  justify-content: space-between;
+  overflow: auto;
+  .menu-logo {
+    opacity: 0.2922991071428571;
+  }
+  .menu-text {
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 2.492308px;
+    text-align: center;
+    color: #a6a6a6;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      font-size: 44px;
+      font-weight: 200;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1;
+      letter-spacing: normal;
+      text-align: center;
+      padding: 30px;
+    }
+  }
+  a {
+    color: #040404;
+  }
+  .social-links {
+    display: flex;
+    padding: 45px 0;
+    justify-content: center;
+    a {
+      padding: 8px;
+    }
+  }
+  .menu-close {
+    position: absolute;
+    right: 45px;
+    top: 39px;
+    cursor: pointer;
+  }
+}
+
+body.menu-open {
+  .menu-container {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+body.menu-open {
+  overflow: hidden;
+}

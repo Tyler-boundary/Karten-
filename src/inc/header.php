@@ -9,5 +9,6 @@
 <body>
   <header class="header">
     <img src="<?php echo get_image('karten-temp-logo.png') ?>" alt="" class="logo"></img>
-    <img src="<?php echo get_image('ham-menu.svg') ?>" alt="" class="hamburger"></img>
+    <img src="<?php echo get_image('ham-menu.svg') ?>" alt="" class="hamburger" onclick="openMenu()"></img>
   </header>
+  <?php include(locate_template('inc/menu.php')); ?>

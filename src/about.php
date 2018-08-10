@@ -9,7 +9,7 @@
     ['title' => 'Mechanical Engineering', 'description' => 'Our highly collaborative approach to innovation ensures a smooth transition from design to production. We create product architecture that supports innovative forms, implementing novel mechanisms and efficiencies wherever possible.'],
   ];
 ?>
-<div class="about-page">
+<div class="page">
   <div class="container">
     <div class="heading animate-in__fadeUp animate-once">Since 1983, Karten Design has Ipsum Dolar Sit Amet, Consectetuer Elit.</div>
     <div class="divider"></div>

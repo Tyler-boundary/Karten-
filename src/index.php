@@ -9,7 +9,7 @@
   ];
 ?>
 
-<div class="home-page">
+<div class="page">
   <div class="container">
     <div class="heading animate-in__fadeUp animate-once">We create extraordinary experiences between people and products</div>
     <div class="divider"></div>
