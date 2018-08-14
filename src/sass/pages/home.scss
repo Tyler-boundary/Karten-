@@ -172,16 +172,17 @@
       }
     }
     .projects-section {
-      margin-top: 330px;
       .row-wrapper {
         margin: auto;
         max-width: $content-width;
       }
       .project {
         cursor: pointer;
-        margin-bottom: 110px;
+        margin-bottom: 97px;
         .project-image {
+          background-color: #535353;
           background-size: cover;
+          background-position: center center;
           opacity: 1;
           position: relative;
           transition: opacity 0.5s;
@@ -192,11 +193,15 @@
           }
         }
         .project-subheading {
-          color: #a0a0a0;
           font-family: $montserrat;
           font-size: 12px;
           font-weight: bold;
-          margin-top: 29px;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: #a0a0a0;
+          text-transform: uppercase;
         }
         .project-title {
           color: #636363;
@@ -204,6 +209,31 @@
           font-size: 28px;
           font-weight: bold;
           transition: color 0.5s;
+          text-transform: uppercase;
+        }
+        &.short {
+          .project-image {
+            height: 308px;
+          }
+          .project-subheading {
+            margin-top: 27px;
+          }
+        }
+        &.normal {
+          .project-image {
+            height: 338px;
+          }
+          .project-subheading {
+            margin-top: 25px;
+          }
+        }
+        &.tall {
+          .project-image {
+            height: 358px;
+          }
+          .project-subheading {
+            margin-top: 23px;
+          }
         }
         &:hover {
           .project-image {

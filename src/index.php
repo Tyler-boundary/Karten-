@@ -26,7 +26,7 @@
         <?php } ?>
       </div>
     </div>
-    <div class="projects-section">
+    <div class="projects-section" style="margin-top: 330px;">
       <div class="row-wrapper">
         <div class="row">
           <?php 

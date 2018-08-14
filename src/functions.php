@@ -139,3 +139,24 @@ add_action('init', 'disable_wp_emojicons');
 function get_image($image) {
   return get_template_directory_uri().'/assets/images/'.$image;
 }
+
+// Our custom post type function
+function create_posttype() {
+
+  register_post_type( 'projects',
+  // CPT Options
+      array(
+          'labels' => array(
+              'name' => __( 'Projects' ),
+              'singular_name' => __( 'Project' )
+          ),
+          'public' => true,
+          'has_archive' => true,
+          'rewrite' => array('slug' => 'works'),
+          'taxonomies' => array('category', 'post_tag', 'featured'),
+          'supports' => array('title', 'editor', 'thumbnail'),
+      )
+  );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );
