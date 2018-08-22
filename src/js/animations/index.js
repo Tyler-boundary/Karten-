@@ -35,6 +35,16 @@ const applyScroll = () => {
       $(element).addClass('active');
     }
   }
+
+  // full width
+  const fullWidthElements = $('.full-width');
+  for (let i = 0; i < fullWidthElements.length; i ++) {
+    const element = fullWidthElements[i];
+    const parent = $(element).closest('.elementor-container');
+    if (parent) {
+      parent.addClass('full-width');
+    }
+  }
 }
 
 $(document).ready(() => {

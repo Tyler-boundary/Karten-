@@ -33,7 +33,7 @@ add_action('wp_enqueue_scripts', 'enqueue_script');
 
 function dequeue_script() {
   if(!is_admin()) {
-    wp_deregister_script('jquery');
+    // wp_deregister_script('jquery');
     wp_deregister_script('wp-embed');
   }
 }
@@ -155,6 +155,36 @@ function create_posttype() {
           'rewrite' => array('slug' => 'works'),
           'taxonomies' => array('category', 'post_tag', 'featured'),
           'supports' => array('title', 'editor', 'thumbnail'),
+      )
+  );
+
+  register_post_type( 'outsights',
+  // CPT Options
+      array(
+          'labels' => array(
+              'name' => __( 'Outsights' ),
+              'singular_name' => __( 'Outsight' )
+          ),
+          'public' => true,
+          'has_archive' => true,
+          'rewrite' => array('slug' => 'outsights'),
+          'taxonomies' => array('category', 'post_tag', 'featured'),
+          'supports' => array('title', 'editor', 'thumbnail'),
+      )
+  );
+
+  register_post_type( 'news',
+  // CPT Options
+      array(
+          'labels' => array(
+              'name' => __( 'News' ),
+              'singular_name' => __( 'News' )
+          ),
+          'public' => true,
+          'has_archive' => true,
+          'rewrite' => array('slug' => 'news'),
+          'taxonomies' => array('category', 'post_tag', 'featured'),
+          'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
       )
   );
 }

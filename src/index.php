@@ -32,7 +32,7 @@
           <?php 
             foreach ($projects as $project) {
           ?>
-            <? if ($project['full-width']) { ?>
+            <? if (isset($project['full-width']) && $project['full-width']) { ?>
                 </div>
               </div>
               <div class="<? echo $project['class'] ?> project full-width animate-once animate-in__fadeUp">
