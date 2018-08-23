@@ -26,6 +26,7 @@
     line-height: normal;
     letter-spacing: 2.492308px;
     text-align: center;
+    text-transform: uppercase;
     color: #a6a6a6;
   }
   ul {
@@ -41,6 +42,12 @@
       letter-spacing: normal;
       text-align: center;
       padding: 30px;
+      a {
+        text-decoration: none;
+        &:hover {
+          color: #9B9B9B;
+        }
+      }
     }
   }
   a {

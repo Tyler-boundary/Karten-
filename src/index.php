@@ -13,7 +13,7 @@
   <div class="container">
     <div class="heading animate-in__fadeUp animate-once">We create extraordinary experiences between people and products</div>
     <div class="divider"></div>
-    <div class="subheading animate-in__fadeUp animate-once">We've designed medical devices that touched over 2.5 million people's lives.</div>
+    <div class="subheading animate-in__fadeUp animate-once" style="margin-top: 350px">We've designed medical devices that touched over 2.5 million people's lives.</div>
     <div class="clients-section" style="margin-top: 338px;">
       <div class="title">Our Clients</div>
       <div class="row animate-once">
@@ -26,7 +26,7 @@
         <?php } ?>
       </div>
     </div>
-    <div class="projects-section" style="margin-top: 330px;">
+    <div class="projects-section" style="margin-top: 330px; margin-bottom: 150px">
       <div class="row-wrapper">
         <div class="row">
           <?php 

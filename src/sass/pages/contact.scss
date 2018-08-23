@@ -7,5 +7,12 @@
     max-width: 100%;
     padding: 20px 20px 0 20px;
     width: 100%;
+    .heading {
+      font-size: 48px;
+      font-weight: bold;
+      margin: auto;
+      max-width: $content-width;
+      text-transform: uppercase;
+    }
   }
 }

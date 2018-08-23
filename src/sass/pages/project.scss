@@ -25,6 +25,55 @@
       letter-spacing: -0.8387097px;
       width: $content-width;
     }
+    .more-projects {
+      font-size: 12px;
+      font-weight: 600;
+      margin: auto;
+      text-align: center;
+      color: #636363;     
+      text-transform: uppercase; 
+    }
+    .project-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 65px;
+      margin-bottom: 130px;
+      flex-wrap: wrap;
+      .project {
+        text-decoration: none;
+        margin: 26px;
+        .project-image {
+          background-color: #535353;
+          height: 400px;
+          width: 400px;
+          opacity: 1;
+          position: relative;
+          transition: opacity 0.5s;
+        }
+        .project-title {
+          font-size: 28px;
+          font-weight: bold;
+          color: #636363;
+          margin-top: 8px;
+          text-transform: uppercase; 
+        }
+        .project-subheading {
+          font-size: 12px;
+          font-weight: 600;
+          color: #636363;
+          margin-top: 25px;
+          text-transform: uppercase; 
+        }
+        &:hover {
+          .project-image {
+            opacity: 0.7;
+          }
+          .project-title {
+            color: orangered;
+          }
+        }
+      }
+    }
   }
   .project-image {
     background-size: cover;

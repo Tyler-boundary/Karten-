@@ -25,6 +25,11 @@ const applyScroll = () => {
      // upscroll code
      $('.header').removeClass('hidden');
   }
+  if (st > 100) {
+    $('.header').removeClass('transparent');
+  } else {
+    $('.header').addClass('transparent');
+  }
   lastScrollTop = st;
 
   // make animate-once elements to be active

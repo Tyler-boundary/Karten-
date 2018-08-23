@@ -13,7 +13,7 @@
   <div class="container">
     <div class="heading animate-in__fadeUp animate-once">Since 1983, Karten Design has Ipsum Dolar Sit Amet, Consectetuer Elit.</div>
     <div class="divider"></div>
-    <div class="subheading animate-in__fadeUp animate-once">
+    <div class="subheading animate-in__fadeUp animate-once" style="margin-top: 350px">
       Karten Design is an award-winning product design and innovation consultancy passionate about creating extraordinary experiences between people and products.
       <br />
       <br />
@@ -60,10 +60,10 @@
     <div class="work-with-us-wrapper">
       <div class="work-with-us-section animate-in__fadeUp animate-once">
         <div class="title">Like what you see? we’re ready to chat about your project.</div>
-        <div class="label-wrapper">
+        <a class="label-wrapper" href="<? echo SUB_PATH ?>/contact">
           <div class="label">Work With Us</div>
           <img src="<?php echo get_image('right-arrow-orange.png') ?>" alt="k:d" class="right-arrow"></img>
-      </div>
+        </a>
     </div>
   </div>
 </div>
