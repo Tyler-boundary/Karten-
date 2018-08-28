@@ -23,7 +23,7 @@
   <? echo the_content() ?>
   <div class="container" style="margin-top: 225px">
     <div class="more-projects">More Projects</div>
-    <div class="project-wrapper">
+    <div class="project-wrapper row">
       <? $nextCount = -1; ?>
       <? 
         foreach ($projects as $project) {

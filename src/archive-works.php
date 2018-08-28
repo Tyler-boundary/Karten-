@@ -14,7 +14,7 @@
           <?php 
             foreach ($projects as $project) {
           ?>
-            <div class="col-lg-4 col-md-6 col-sm-12 animate-once animate-in__fadeUp">
+            <div class="col-lg-4 col-md-6 col-sm-12 animate-once animate-in__fadeUp project-wrapper">
               <a div class="project <? echo get_field('height', $project->ID) ?>" href="<? echo get_permalink($project) ?>">
                 <div
                   class="project-image"

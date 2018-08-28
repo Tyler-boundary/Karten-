@@ -41,14 +41,20 @@
       flex-wrap: wrap;
       .project {
         text-decoration: none;
+        width: 400px;
+        max-width: 100%;
         margin: 26px;
         .project-image {
           background-color: #535353;
-          height: 400px;
-          width: 400px;
           opacity: 1;
+          width: 100%;
           position: relative;
           transition: opacity 0.5s;
+          &:before {
+            content: ' ';
+            display: block;
+            padding-top: 100%;
+          }
         }
         .project-title {
           font-size: 28px;
