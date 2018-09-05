@@ -8,7 +8,7 @@
 ?>
 <div class="page">
   <div class="container">
-    <div class="projects-section" style="margin-top: 244px; margin-bottom: 350px">
+    <div class="projects-section" style="margin-bottom: 350px">
       <div class="row-wrapper">
         <div class="row">
           <?php 
@@ -21,7 +21,7 @@
                   style="background-image: url(<? echo get_the_post_thumbnail_url($project) ?>);"
                 >
                 </div>
-                <div class="project-subheading">Industrial Design, Branding</div>
+                <div class="project-subheading"><? echo get_field('subheading', $project -> ID) ?></div>
                 <div class="project-title"><? echo $project -> post_title ?></div>
               </a>
             </div>

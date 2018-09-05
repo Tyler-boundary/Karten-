@@ -17,6 +17,7 @@ $.fn.inView = function() {
 let lastScrollTop = 0;
 
 const applyScroll = () => {
+  console.log('applyScroll');
   let st = $(window).scrollTop();
   if (st > lastScrollTop){
       // downscroll code

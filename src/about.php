@@ -13,7 +13,7 @@
   <div class="container">
     <div class="heading animate-in__fadeUp animate-once">Since 1983, Karten Design has Ipsum Dolar Sit Amet, Consectetuer Elit.</div>
     <div class="divider"></div>
-    <div class="subheading animate-in__fadeUp animate-once" style="margin-top: 350px">
+    <div class="subheading animate-in__fadeUp animate-once">
       Karten Design is an award-winning product design and innovation consultancy passionate about creating extraordinary experiences between people and products.
       <br />
       <br />
@@ -37,16 +37,16 @@
     <div class="heading-2 animate-in__fadeUp animate-once" style="margin-top: 397px;">
       Lorem ipsum dolor sit amet adiscio, consectetuer adipiscing elit.
     </div>
-    <div class="subheading-2 animate-in__fadeUp animate-once" style="margin-top: 78px;">
+    <div class="subheading-2 animate-in__fadeUp animate-once" style="margin-top: 78px; margin-bottom: 210px;">
       Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis
     </div>
-    <div class="clients-section" style="margin-top: 547px;">
+    <div class="clients-section">
       <div class="title">Our Clients</div>
       <div class="row animate-once">
         <?php
           for($i = 1; $i<=28; $i++) {
         ?>
-          <div class="col-sm-6 col-md-4 col-lg-3 client-col animate-in__fadeUp" style="transition-delay: <?php echo $i * 0.1 ?>s;">
+          <div class="col-xs-6 col-md-4 col-lg-3 client-col animate-in__fadeUp" style="transition-delay: <?php echo $i * 0.1 ?>s;">
             <img src="<? echo get_image('axonics-logo-color-no-tag-large.png') ?>" alt="axonics-logo-color-no-tag-large" class="client"></img>
           </div>
         <?php } ?>
@@ -60,7 +60,7 @@
     <div class="work-with-us-wrapper">
       <div class="work-with-us-section animate-in__fadeUp animate-once">
         <div class="title">Like what you see? we’re ready to chat about your project.</div>
-        <a class="label-wrapper" href="<? echo SUB_PATH ?>/contact">
+        <a class="label-wrapper" href="<? echo SUB_PATH ?>contact">
           <div class="label">Work With Us</div>
           <img src="<?php echo get_image('right-arrow-orange.png') ?>" alt="k:d" class="right-arrow"></img>
         </a>
