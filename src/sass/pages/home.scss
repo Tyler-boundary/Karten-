@@ -127,11 +127,8 @@
       .client-col {
         text-align: center;
         .client {
+          margin: 25px 0;
           width: 100%;
-          @media only screen and (max-width: 600px) {
-            margin: 25px 0;
-            width: 100%;
-          }
         }
       }
     }
@@ -211,6 +208,9 @@
       margin-top: 244px;
       @media only screen and (max-width: 600px) {
         margin-top: 125px;
+      }
+      .project {
+        display: block;
       }
       .row-wrapper {
         margin: auto;

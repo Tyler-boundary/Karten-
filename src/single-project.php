@@ -41,7 +41,7 @@
             style="background-image: url(<? echo get_the_post_thumbnail_url($project) ?>);"
           >
           </div>
-          <div class="project-subheading">Industrial Design, Branding</div>
+          <div class="project-subheading"><? echo get_field('subheading', $project -> ID) ?></div>
           <div class="project-title"><? echo $project -> post_title ?></div>
         </a>
       <?
