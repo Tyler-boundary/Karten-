@@ -126,9 +126,12 @@
       }
       .client-col {
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .client {
           margin: 25px 0;
-          width: 100%;
+          max-width: 100%;
         }
       }
     }
@@ -216,8 +219,10 @@
         margin: auto;
         max-width: $content-width;
         .row {
-          margin-left: -32px;
-          margin-right: -32px;
+          &.project-row {
+            margin-left: -32px;
+            margin-right: -32px;
+          }
           &.home-projects {
             margin-left: -25px;
             margin-right: -25px;

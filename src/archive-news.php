@@ -11,9 +11,9 @@
   ));
 ?>
 <div class="page">
-  <div class="container" style="background-color: #f5f5f5">
+  <div class="container" style="background-color: #f5f5f5;">
     <div class="group-heading animate-in__fadeUp animate-once" style="margin-top: 193px; margin-bottom: 122px;">OUTSIGHTS</div>
-    <div class="projects-section" style="margin-top: 38px;">
+    <div class="projects-section" style="margin-top: 38px; margin-bottom: 122px;">
       <div class="row-wrapper">
         <div class="row">
           <?php 
@@ -60,7 +60,7 @@
                   <? echo $news -> post_title ?>
                 </div>
                 <div class="project-description">
-                  <? echo get_field('subheading', $project -> ID) ?>
+                  <? echo get_field('description', $news->ID) ?>
                 </div>
               </div>
             </a>

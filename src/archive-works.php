@@ -10,7 +10,7 @@
   <div class="container">
     <div class="projects-section" style="margin-bottom: 350px">
       <div class="row-wrapper">
-        <div class="row">
+        <div class="row project-row">
           <?php 
             foreach ($projects as $project) {
           ?>
