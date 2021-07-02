@@ -1,8 +1,1 @@
-node_modules/
-.tmp/
-
-public/wp-config.php
-public/wp-content/uploads/*
-!public/wp-content/uploads/.keep
-
-public/wp-content/themes/boundary
+node_modules

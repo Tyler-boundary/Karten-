@@ -1,0 +1,57 @@
+.loader--enabled .main-wrap {
+  transform: translateY(50px);
+  will-change: transform;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: #fff;
+
+  &__container {
+    position: relative;
+  }
+
+  &__wordmark {
+    opacity: 0;
+  }
+
+  &__logo {
+    position: relative;
+  }
+
+  &__dots {
+    position: absolute;
+    top: 0;
+    left: 51.4%;
+    overflow: visible;
+    opacity: 0;
+  }
+
+  &__dot {
+    stroke-width: 0.12%;
+    transform-origin: center;
+  }
+
+  &__keyword {
+    position: absolute;
+    top: 18%;
+    opacity: 0;
+
+    &--1 {
+      left: -19%;
+    }
+
+    &--2 {
+      right: -29%;
+    }
+  }
+}

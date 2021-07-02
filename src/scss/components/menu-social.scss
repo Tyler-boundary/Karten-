@@ -1,0 +1,62 @@
+.screen-reader-text {
+	position: absolute;
+	top: -9999em;
+	left: -9999em;
+}
+
+.menu-social {
+	a {
+		padding: 8px;
+		opacity: 0.4;
+		text-decoration: none;
+		transition: all 0.5s ease-in-out;
+
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+
+	@media only screen and (max-width: 600px) {
+		margin-bottom: 60px;
+	}
+}
+
+.menu-social ul {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+	margin-bottom: 0;
+	font-size: 22px;
+}
+
+.menu-social ul li {
+	position: relative;
+}
+
+.menu-social li a::before {
+	font-family: "karten-icons" !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-variant: normal !important;
+	text-transform: none !important;
+	speak: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.menu-social li a[href*="facebook.com"]::before {
+	content: '\61';
+	// color:   #3b5998;
+}
+
+.menu-social li a[href*="twitter.com"]::before {
+	content: '\63';
+	// color:   #33ccff;
+}
+
+.menu-social li a[href*="linkedin.com"]::before {
+	content: '\62';
+	// color:   #0e76a8;
+}

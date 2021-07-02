@@ -1,0 +1,87 @@
+%gutter {
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  @media only screen and (max-width: 600px) {
+    padding-left: $gutter-sm;
+    padding-right: $gutter-sm;
+  }
+}
+
+%input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #d9d9e3;
+  color: #93939d;
+  font-size: 23px;
+  width: 100%;
+  margin: 0;
+  padding: 14px 0 14px 18px;
+  // Cover webkit's yellow autofill background
+  box-shadow: inset 0 0 0px 9999px #f6f6f8;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
+  }
+
+  &::placeholder {
+    color: #c3c3cb;
+  }
+
+  &:focus {
+    border-bottom-color: #93939d;
+    outline: 0;
+  }
+
+  &--large {
+    @extend %input;
+    color: #414141;
+    font-weight: 300;
+    font-size: 30px;
+    padding: 0 0 0.6em 0;
+
+    &::placeholder {
+      color: transparentize(#414141, 0.3);
+    }
+
+    @media only screen and (max-width: 600px) {
+      font-size: 20px;
+    }
+  }
+}
+
+%input__wrap {
+  margin-top: 41px;
+  position: relative;
+  width: 100%;
+
+  &--large {
+    @extend %input__wrap;
+    margin-top: 67px;
+    padding-left: 33px;
+    padding-right: 33px;
+
+    @media only screen and (max-width: 600px) {
+      margin-top: 35px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+%input-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  &--large {
+    @extend %input-group;
+    margin-left: -33px;
+    margin-right: -33px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

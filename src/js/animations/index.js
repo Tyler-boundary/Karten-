@@ -1,4 +1,5 @@
 import $ from 'jquery/dist/jquery.slim';
+import { debounce } from 'lodash';
 
 $.fn.inView = function() {
   //Window Object
@@ -11,31 +12,37 @@ $.fn.inView = function() {
   const visibleArea = win.scrollTop() + win.height();
   //the end of the object to check
   const objEndPos = obj.offset().top;
-  return(visibleArea >= objEndPos && scrollPosition <= objEndPos ? true : false)
+  return (
+    visibleArea >= objEndPos && scrollPosition <= objEndPos
+    ? true
+    : false)
 };
 
 let lastScrollTop = 0;
 
+const $header = $('.header');
+
 const applyScroll = () => {
-  console.log('applyScroll');
-  let st = $(window).scrollTop();
-  if (st > lastScrollTop){
-      // downscroll code
-      $('.header').addClass('hidden');
+  const st = $(window).scrollTop();
+  const isScrolledToBottom = st > $(document).height() - $(window).height() - 10;
+
+  if (st > lastScrollTop && st > 100 && !isScrolledToBottom) {
+    // downscroll code
+    $header.addClass('hidden');
   } else {
-     // upscroll code
-     $('.header').removeClass('hidden');
+    // upscroll code
+    $header.removeClass('hidden');
   }
   if (st > 100) {
-    $('.header').removeClass('transparent');
+    $header.removeClass('transparent');
   } else {
-    $('.header').addClass('transparent');
+    $header.addClass('transparent');
   }
   lastScrollTop = st;
 
   // make animate-once elements to be active
   const inactiveAnimateOnceElements = $('.animate-once:not(.active)');
-  for (let i = 0; i < inactiveAnimateOnceElements.length; i ++) {
+  for (let i = 0; i < inactiveAnimateOnceElements.length; i++) {
     const element = inactiveAnimateOnceElements[i];
     if ($(element).inView()) {
       $(element).addClass('active');
@@ -44,7 +51,7 @@ const applyScroll = () => {
 
   // full width
   const fullWidthElements = $('.full-width');
-  for (let i = 0; i < fullWidthElements.length; i ++) {
+  for (let i = 0; i < fullWidthElements.length; i++) {
     const element = fullWidthElements[i];
     const parent = $(element).closest('.elementor-container');
     if (parent) {
@@ -53,10 +60,6 @@ const applyScroll = () => {
   }
 }
 
-$(document).ready(() => {
-  applyScroll();
-})
+$(window).scroll(_.debounce(applyScroll, 10, { leading: true }));
 
-$(window).scroll((e) => {
-  applyScroll();
-});
+applyScroll();

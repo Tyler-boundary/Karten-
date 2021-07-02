@@ -1,0 +1,12 @@
+@import './icons';
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Cantarell:400,700|Montserrat:200,300,400,500,600,700');
+
+// Font Variables
+$cantarell: 'Cantarell', serif;
+$montserrat: 'Montserrat', serif;
+
+body {
+  font-family: $montserrat !important;
+}
