@@ -26,13 +26,27 @@
   ];
 ?>
 
+
+
+<?php 
+
+// IPV Animation
+
+$ipv_animation =  get_field('ipv_animation');
+$shortcode = sprintf(
+  '[ipv_animation img_dir="%s" img_prefix="%s" img_extension="%s text="%s" last_frame="%s" ]',
+    $ipv_animation['images_directory'],
+    $ipv_animation['image_prefix'],
+    $ipv_animation['image_extension'],
+    $ipv_animation['animation_text'],
+    $ipv_animation['number_frames']
+);
+
+echo do_shortcode($shortcode); 
+?> 
+
+
 <div class="page">
-  <div class="container">
-    <div class="intro-wrap">
-      <h1 class="heading animate-in__fadeUp animate-once"><? echo get_field('heading') ?></h1>
-      <div class="subheading animate-in__fadeUp animate-once" style="color: #ec7600"><? echo get_field('subheading') ?></div>
-    </div>
-  </div>
 
   <div class="container" style="background: #333">
     <div class="clients-section">

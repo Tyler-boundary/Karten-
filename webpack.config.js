@@ -1,7 +1,8 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+  //mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+  mode: 'development',
   entry: {
     app: './src/index.js',
     'loader-wipe': './src/js/loader-wipe.js',

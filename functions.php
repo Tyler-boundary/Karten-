@@ -266,3 +266,28 @@ function karten_remove_menu_items() {
     remove_menu_page( 'edit.php?post_type=news' );
 }
 add_action( 'admin_menu', 'karten_remove_menu_items' );
+
+
+/* * IPV ANIMATION */ 
+
+function ipv_animation_shortcode($atts){ 
+
+  // JS on js/karten2011.js 
+  $new_atts = shortcode_atts(
+    array(
+      'img_dir' => 'https://karten.local/wp-content/uploads/ipvanimation/',
+      'img_prefix' => 'ipvplus_', 
+      'img_extension' => '.jpg', 
+      'text' => 'WE CREATE\nEXTRAORDINARY\nEXPERIENCES IN\nHEALTHCARE.',
+      'last_frame' => '50'
+    ),
+    $atts,
+    'ipv'
+  );
+
+  return ' <script id="ipv_data" type="application/json">' . json_encode($new_atts) . '</script>' . '<div class="scroll-bound"><canvas id="ipv-animation" class="ipv-animation"> </canvas></div>';
+  }
+
+  add_shortcode('ipv_animation', 'ipv_animation_shortcode');
+
+?>

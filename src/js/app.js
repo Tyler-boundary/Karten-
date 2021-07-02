@@ -2,6 +2,7 @@ import 'bootstrap';
 import './animations';
 import './layout';
 import '../scss/style.scss';
+import './components/ipv_animation.js'; 
 
 import unorphan from 'unorphan';
 
