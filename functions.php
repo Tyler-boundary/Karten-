@@ -285,7 +285,16 @@ function ipv_animation_shortcode($atts){
     'ipv'
   );
 
-  return ' <script id="ipv_data" type="application/json">' . json_encode($new_atts) . '</script>' . '<div class="scroll-bound"><canvas id="ipv-animation" class="ipv-animation"> </canvas></div>';
+  return 
+  '<script id="ipv_data" type="application/json">' 
+  . json_encode($new_atts) . 
+  '</script>' . 
+  '<div class="scroll-bound">
+    <div class="ipv-animation-container">  
+    <h1 class="ipv-animation-title">'.$atts['text'].'</h1>
+    <canvas id="ipv-animation" class="ipv-animation"></canvas>
+    </div>
+  </div>';
   }
 
   add_shortcode('ipv_animation', 'ipv_animation_shortcode');

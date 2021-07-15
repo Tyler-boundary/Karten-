@@ -7978,16 +7978,31 @@ body.menu-open {
 
 .scroll-bound {
   height: 200vh; }
-  .scroll-bound .ipv-animation {
-    /*position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);*/
+  .scroll-bound .ipv-animation-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: #e6e6e6;
+    min-height: 100vh;
     max-width: 100vw;
     max-height: 100vh;
     position: sticky;
     top: 0; }
+    @media all and (max-width: 768px) {
+      .scroll-bound .ipv-animation-container {
+        justify-content: flex-end; } }
+    .scroll-bound .ipv-animation-container h1.ipv-animation-title {
+      font: bold 77px "Montserrat", sans-serif;
+      color: #B2B2B2;
+      position: absolute;
+      z-index: 9;
+      left: 5%; }
+      @media all and (max-width: 768px) {
+        .scroll-bound .ipv-animation-container h1.ipv-animation-title {
+          font-size: 32px;
+          top: 20%; } }
+    .scroll-bound .ipv-animation-container .ipv-animation {
+      background: #e6e6e6; }
 
 .page.contact-page {
   color: #414142; }

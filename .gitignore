@@ -1,3 +1,8 @@
 node_modules
-app.js.map
-style.css.map
+loader-wipe.js
+*.map
+loader.js
+loader2.js
+loader3.js
+loader4.js
+
