@@ -44362,16 +44362,17 @@ var ipv_data = JSON.parse(document.getElementById("ipv_data").textContent);
 var img_path = ipv_data.img_dir + ipv_data.img_prefix;
 var frameCount = ipv_data.last_frame;
 var bg_color = "#e6e6e6";
-var text = ipv_data.text;
+var img_dimensions = [1100, 800];
 var images = [null]; // since everything else is 1-indexed, explicitly fill images[0]
 
 Number.prototype.map = function (in_min, in_max, out_min, out_max) {
   return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 };
 
-function generateText(text, size, index) {
+function generateText(index) {
   var is_mobile = window.innerWidth < 768 ? true : false;
   var y = 0;
+  var max_size = 77;
 
   var _size = is_mobile ? 32 : title.style.fontSize;
 
@@ -44380,7 +44381,7 @@ function generateText(text, size, index) {
   if (window.innerWidth > 768) {
     // Only update the Y, size and color if its desktop
     y = index.map(0, frameCount, 0, -600);
-    _size = index.map(0, frameCount, size, 55);
+    _size = index.map(0, frameCount, max_size, 55);
     color = index.map(0, frameCount, 178, 230);
   }
 
@@ -44389,48 +44390,57 @@ function generateText(text, size, index) {
   title.style.color = "rgb(".concat(color, ",").concat(color, ", ").concat(color, ")");
 }
 
+var currentFrame = function currentFrame(index) {
+  return "".concat(img_path).concat(index.toString(), ".jpg");
+};
+
+var preloadImages = function preloadImages() {
+  // Preload for faster animation
+  for (var i = 0; i <= frameCount; i++) {
+    images[i] = new Image();
+    images[i].src = currentFrame(i);
+  }
+
+  return images;
+};
+
+function clearCanvas() {
+  // Draws a rect to clean out the canvas
+  context.fillStyle = bg_color;
+  context.fillRect(0, 0, canvas.width, canvas.height);
+}
+
 function draw() {
-  var currentFrame = function currentFrame(index) {
-    return "".concat(img_path).concat(index.toString(), ".jpg");
-  }; // Set canvas dimensions
-
-
+  var init = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+  // Set canvas dimensions
   canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight; // Create, load and draw the first image
+  canvas.height = window.innerHeight;
+  clearCanvas(); // Create, load and draw the first image
 
-  var img = new Image();
+  img = new Image();
   img.src = currentFrame(0);
-  var scale = window.innerWidth > 768 ? 1 : 0.7;
+  var max_height = Math.min(1, window.innerHeight / img_dimensions[1]);
+  var scale = Math.min(max_height, window.innerWidth.map(768, 320, max_height, 0.4));
   var scaled_width, scaled_height, x, y;
+  scaled_width = img_dimensions[0] * scale;
+  scaled_height = img_dimensions[1] * scale;
+  x = window.innerWidth > 768 ? canvas.width - scaled_width : canvas.width / 2 - scaled_width / 2;
+  y = canvas.height - scaled_height;
 
   img.onload = function () {
-    scaled_width = img.width * scale;
-    scaled_height = img.height * scale;
-    x = window.innerWidth > 768 ? canvas.width - scaled_width / 1.5 : -scaled_width / 5;
-    y = canvas.height - scaled_height / 1.2;
     context.drawImage(img, x, y, scaled_width, scaled_height);
-    generateText(text, 77, 0);
-  };
-
-  var preloadImages = function preloadImages() {
-    // Preload for faster animation
-    for (var i = 0; i <= frameCount; i++) {
-      images[i] = new Image();
-      images[i].src = currentFrame(i);
-    }
   };
 
   var updateImage = function updateImage(index) {
     // Scaled dimensions for mobile
     if (window.innerWidth > 768) {
       // We move the image horizontally if desktop
-      x = index.map(0, frameCount, canvas.width - scaled_width / 1.5, canvas.width / 2 - scaled_width / 2);
+      x = index.map(0, frameCount, canvas.width - scaled_width, canvas.width / 2 - scaled_width / 2);
     }
 
-    context.fillStyle = bg_color;
-    context.fillRect(0, 0, canvas.width, canvas.height);
+    clearCanvas();
     context.drawImage(images[index], x, y, scaled_width, scaled_height);
-    generateText(text, 77, index);
+    generateText(index);
   };
 
   window.addEventListener('scroll', function () {
@@ -44442,10 +44452,11 @@ function draw() {
       return updateImage(frameIndex + 1, scrollFraction);
     });
   });
-  preloadImages();
 }
 
-draw();
+preloadImages();
+draw(true); // If the window is resized, redraw
+
 window.onresize = draw;
 
 /***/ }),
