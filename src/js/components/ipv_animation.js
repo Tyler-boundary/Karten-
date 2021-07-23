@@ -74,6 +74,8 @@ function draw(init = false){
 
   img.onload=function(){
 
+    jQuery(".ipv-animation-title, .ipv-animation").fadeIn(1300, "swing");
+
     context.drawImage(img, x, y,scaled_width,scaled_height);
 
   }

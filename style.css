@@ -7992,6 +7992,7 @@ body.menu-open {
       .scroll-bound .ipv-animation-container {
         justify-content: flex-end; } }
     .scroll-bound .ipv-animation-container h1.ipv-animation-title {
+      display: none;
       font: bold 77px "Montserrat", sans-serif;
       color: #B2B2B2;
       position: absolute;
@@ -8002,6 +8003,7 @@ body.menu-open {
           font-size: 32px;
           top: 20%; } }
     .scroll-bound .ipv-animation-container .ipv-animation {
+      display: none;
       background: #e6e6e6; }
 
 .page.contact-page {

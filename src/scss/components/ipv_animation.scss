@@ -16,6 +16,7 @@
         top:0;
 
         h1.ipv-animation-title {
+            display: none;
             font: bold 77px "Montserrat", sans-serif;
             color: #B2B2B2;
             position: absolute;
@@ -27,6 +28,7 @@
             }
         }
         .ipv-animation {
+            display: none;
             background: #e6e6e6;
         } 
     }
