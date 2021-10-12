@@ -1,0 +1,60 @@
+.header {
+  @extend %gutter;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0.3s, transform 0.3s, background-color 0.5s, padding 0.5s;
+
+  &.hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  &.transparent {
+    background-color: transparent;
+  }
+
+  .logo {
+    width: 205px;
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+
+  &.light {
+    .logo.light,
+    .hamburger.light {
+      display: block;
+    }
+  }
+
+  &.dark {
+    .logo.dark,
+    .hamburger.dark {
+      display: block;
+    }
+  }
+
+  &:not(.transparent) {
+    .logo.dark,
+    .hamburger.dark {
+      display: block;
+    }
+
+    .logo.light,
+    .hamburger.light {
+      display: none;
+    }
+  }
+}

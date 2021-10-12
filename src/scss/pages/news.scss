@@ -1,0 +1,128 @@
+.news-archive {
+
+  .container {
+
+    .projects-section {
+
+      @media only screen and (max-width: 600px) {
+        margin-bottom: 30px !important;
+      }
+
+      .project {
+        margin-bottom: 50px;
+
+        .project-image--contain {
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    .group-heading {
+      margin-bottom: 0 !important;
+    }
+
+    .outsight-subheading {
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 16px;
+      margin-bottom: 7px;
+      line-height: 1.6;
+    }
+
+    .download-link {
+      display: inline-flex;
+      align-items: center;
+      font-family: $cantarell;
+      font-size: 12px;
+      font-weight: 700;
+      color: #82828a;
+      text-transform: uppercase;
+      margin-top: 18px;
+
+      i {
+        font-size: 1.4em;
+        line-height: 1;
+        margin-left: 4px;
+      }
+    }
+
+    .post-date {
+      font-size: 15px;
+      color: #c8c8ce;
+    }
+  }
+}
+
+.page.news-page {
+  color: #414142;
+
+  &::before {
+    content: ' ';
+    padding-top: 476px;
+    background-color: #f5f5f5;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+    @media only screen and (max-width: 720px) {
+      padding-top: 65vw;
+    }
+  }
+
+  .container {
+    max-width: 714px;
+
+    .projects-section {
+      margin-bottom: 122px;
+
+      @media only screen and (max-width: 600px) {
+        margin-bottom: 0;
+      }
+    }
+
+    div.news-image {
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      &::before {
+        content: ' ';
+        padding-top: 70%;
+        display: block;
+      }
+    }
+
+    img.news-image {
+      width: 100%;
+    }
+
+    .group-heading {
+      @media only screen and (max-width: 600px) {
+        margin-bottom: 0;
+      }
+    }
+
+    .heading {
+      color: #616161;
+      font-size: 37px;
+      font-weight: 400;
+      text-transform: none;
+      line-height: 1.27;
+      margin: 33px 0 0.5rem;
+    }
+
+    .content {
+      color: #616161;
+      font-size: 18px;
+      line-height: 1.44;
+      margin-top: 39px;
+      margin-bottom: 212px;
+
+      @media only screen and (max-width: 720px) {
+        margin-bottom: 110px;
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+form.mailchimp-form {
+  @extend %input-group;
+  position: relative;
+  max-width: 478px;
+
+  label {
+    @extend %input__wrap;
+    padding: 0 15px;
+    @media only screen and (min-width: 601px) {
+      &:nth-child(1),
+      &:nth-child(2) {
+        flex-basis: 50%;
+      }
+    }
+  }
+
+  input[type]:not([type='image']) {
+    @extend %input;
+
+    &.yikes-easy-mc-email {
+      padding-right: 50px;
+    }
+  }
+
+  .right-arrow {
+    width: 32px;
+    margin: 0 !important;
+    position: absolute;
+    right: 30px;
+    bottom: 22px;
+    min-width: 0;
+  }
+
+  p[class$='-message'] {
+    margin: 30px 0 0;
+  }
+}
+
+.footer {
+  align-items: center;
+  background-color: #f6f6f8;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 76px;
+  width: 100%;
+  @extend %gutter;
+
+  .newsletter-title {
+    color: #82828a;
+    font-family: $montserrat;
+    font-size: 28px;
+    margin-top: 105px;
+    text-align: center;
+    @media only screen and (max-width: 600px) {
+      font-size: 24px;
+      max-width: 300px;
+      margin-top: 56px;
+    }
+  }
+
+  .footer-logo {
+    display: block;
+    margin: 120px 0 75px;
+    transition: all 0.5s ease-in-out;
+
+    &:not(:hover) {
+      opacity: 0.7;
+      filter: saturate(0);
+    }
+  }
+}
+
+.right-arrow {
+  width: 32px;
+  height: auto;
+  object-fit: contain;
+}

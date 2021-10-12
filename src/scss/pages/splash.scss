@@ -1,0 +1,47 @@
+.page-template-splash {
+  background-color: #414142;
+
+  .main-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transform: none;
+    will-change: initial;
+  }
+
+  .header,
+  .footer {
+    display: none;
+  }
+
+  .arrow-button a {
+    display: inline-flex;
+    align-items: center;
+    @media (max-width: 767px) {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 22px 30px !important;
+      background-color: #2d2d2d !important;
+    }
+
+    &::after {
+      content: '';
+      width: 39px;
+      height: 14px;
+      margin-left: 15px;
+      background: center / contain no-repeat url('/wp-content/themes/boundary/assets/images/right-arrow-orange.png');
+      transition: all 0.2s ease;
+      @media (max-width: 767px) {
+        width: 27px;
+        height: 10px;
+      }
+    }
+
+    &:hover::after {
+      transform: translateX(5px);
+    }
+  }
+}
