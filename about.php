@@ -12,11 +12,11 @@
   <div class="container">
     <div>
       <h1 class="heading animate-in__fadeUp animate-once">
-        <? echo get_field('heading') ?>
+        <?php echo get_field('heading') ?>
       </h1>
       <div class="divider"></div>
       <div class="subheading animate-in__fadeUp animate-once">
-        <? echo get_field('subheading') ?>
+        <?php echo get_field('subheading') ?>
       </div>
     </div>
   </div>
@@ -44,7 +44,7 @@
               foreach ($logo_section_images as $i => $logo_section_image) {
             ?>
               <div class="col-lg-3 col-md-4 col-xs-6 d-lg-flex align-items-center justify-content-center animate-in__fadeUp" style="transition-delay: <?php echo $i * 0.1 ?>s;">
-                <img src="<? echo $logo_section_image['full_image_url'] ?>" alt="" />
+                <img src="<?php echo $logo_section_image['full_image_url'] ?>" alt="" />
               </div>
             <?php } ?>
           </div>
@@ -70,7 +70,7 @@
               foreach ($academia_section_images as $i => $academia_section_image) {
             ?>
               <div class="col-lg-3 col-md-4 col-xs-6 animate-in__fadeUp" style="transition-delay: <?php echo $i * 0.1 ?>s;">
-                <img src="<? echo $academia_section_image['full_image_url'] ?>" alt="" />
+                <img src="<?php echo $academia_section_image['full_image_url'] ?>" alt="" />
               </div>
             <?php } ?>
           </div>
@@ -99,7 +99,7 @@
                     class="col-lg-4 col-md-6 col-sm-4 col-xs-6 d-flex align-items-center justify-content-center animate-in__fadeUp"
                     style="transition-delay: <?php echo $i * 0.1 ?>s;"
                   >
-                    <img src="<? echo $awards_section_image['full_image_url'] ?>" alt="" />
+                    <img src="<?php echo $awards_section_image['full_image_url'] ?>" alt="" />
                   </div>
                 <?php } ?>
               </div>
@@ -127,69 +127,39 @@
     </div>
   </div>
 
-  <div class="capabilities-wrapper">
-    <div class="container">
-      <div class="capabilities-section">
-        <div class="title">Our Capabilities</div>
-        <div class="row animate-once">
-          <?
-            foreach ($capabilities as $key => $capability) {
-          ?>
-          <div class="col-md-6 animate-in__fadeUp" style="transition-delay: <? echo $key * 0.1 ?>s;">
-            <div class="capability-title">
-              <? echo $capability['name'] ?>
-            </div>
-            <div class="capability-description">
-              <? echo $capability['description'] ?>
-            </div>
-          </div>
-          <? } ?>
-        </div>
-      </div>
-      <? if (get_field('section_heading') !== '') : ?>
-      <div class="heading-2 animate-in__fadeUp animate-once" style="margin-top: 397px;">
-        <? echo get_field('section_heading') ?>
-      </div>
-      <? endif; ?>
-      <? if (get_field('section_subheading') !== '') : ?>
-      <div class="subheading-2 animate-in__fadeUp animate-once" style="margin-top: 78px; margin-bottom: 210px;">
-        <? echo get_field('section_subheading') ?>
-      </div>
-      <? endif; ?>
-    </div>
-  </div>
+
 
   <div class="container" style="background: #333">
     <div class="clients-section">
       <div class="title">Our Clients</div>
-      <div class="row animate-once">
+      <div class="row animate-once row_clients">
         <?php
           foreach ($logos as $i => $logo) {
         ?>
         <div class="col-xs-6 col-md-4 col-lg-3 client-col animate-in__fadeUp"
           style="transition-delay: <?php echo $i * 0.1 ?>s;">
-          <img src="<? echo $logo['full_image_url'] ?>" alt="axonics-logo-color-no-tag-large" class="client"></img>
+          <img src="<?php echo $logo['full_image_url'] ?>" alt="axonics-logo-color-no-tag-large" class="client"></img>
         </div>
         <?php } ?>
       </div>
     </div>
   </div>
 
-  <? if ($testimonials && count($testimonials) > 0) : ?>
-  <? foreach ($testimonials as $i => $testimonial) : ?>
+  <?php if ($testimonials && count($testimonials) > 0) : ?>
+  <?php foreach ($testimonials as $i => $testimonial) : ?>
   <div
     class="quotes-section animate-in__fadeUp animate-once"
-    style="<? if ($i == 0) echo 'margin-top: 491px'; else echo 'margin-top: 50px;' ?>;"
+    style="<?php if ($i == 0) echo 'margin-top: 491px'; else echo 'margin-top: 50px;' ?>;"
   >
     <div class="container">
       <div class="quote">
-        <? echo $testimonial['quote'] ?>
+        <?php echo $testimonial['quote'] ?>
       </div>
       <div class="name">
-        <? echo $testimonial['person'] ?>
+        <?php echo $testimonial['person'] ?>
       </div>
       <div class="company-name">
-        <? echo $testimonial['company'] ?>
+        <?php echo $testimonial['company'] ?>
       </div>
     </div>
   </div>
