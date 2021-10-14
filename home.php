@@ -15,8 +15,8 @@
   $logos = acf_photo_gallery('logos', get_the_id());
   $projects = [
     get_field('project1'),
-    get_field('project2'),
     get_field('project3'),
+    get_field('project2'),
     get_field('project4'),
     get_field('project5'),
     get_field('project6'),
