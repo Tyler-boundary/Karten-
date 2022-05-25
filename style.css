@@ -8197,7 +8197,7 @@ body.menu-open {
         margin-bottom: 100px; } }
     .page .clients-section .title {
       font-size: 24px;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 0.02em;
       margin-bottom: 40px;
       text-transform: uppercase; }
@@ -8936,3 +8936,145 @@ body.menu-open {
 
 
 /*# sourceMappingURL=style.css.map*/
+
+
+/* Home Page Sections CSS Starts */
+.clients-section .row_clients
+{
+  margin-left: -52px;
+}
+.page .clients-section 
+{
+    margin: 100px auto 45px;
+}
+.page .projects-section .project.full-width .project-subheading 
+{
+    margin-top: 42px;
+}
+.page .projects-section .project .project-subheading 
+{
+    font-weight: 700;
+} 
+.page .projects-section .project .project-title 
+{
+    font-weight: 500;
+}
+.page .projects-section .project.full-width 
+{
+    margin-bottom: 85px;
+}
+.page .projects-section .row-wrapper .row.home-projects .project-wrapper 
+{
+    margin-bottom: 90px;
+}
+.page .capabilities-wrapper.capabilities_home 
+{
+    margin-top: 0;
+}
+.page .capabilities-wrapper.capabilities_home .capabilities-section 
+{
+    margin: 69px auto 110px;
+}
+@media (max-width: 767px)
+{
+  .clients-section .row_clients 
+  {
+    margin-left: -23px;
+  }
+}
+/* Home Page Sections CSS Ends */
+
+/* Domain Expertise Section Starts */
+.domain_wrapper 
+{
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 0 140px;
+}
+.domain_wrapper .domainsub_wrapper
+{
+  max-width: 1050px;
+  width: 100%;
+  color: #fff;
+  margin: auto;
+}
+.domain_wrapper h2
+{
+  color: #D0D0D0;
+  font-weight: 400;
+  font-size: 43px;
+}
+.domain_wrapper .domain_cont h3
+{
+  color: #555557;
+  font-weight: 700;
+  font-size: 18px;
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+.domain_wrapper .domain_cont 
+{  
+  margin-top: 70px;
+}
+.domain_wrapper .domain_cont h3:after
+{
+  position: absolute;
+  content: "";
+  background: #DCDCDC;
+  height: 2px;
+  width: 42px;
+  bottom: -18px;
+  left: 0;
+}
+.domain_wrapper .domain_cont ul
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.domain_wrapper .domain_cont li
+{
+  font-size: 18px;
+  color: #666666;
+  line-height: 30px;
+}
+.domain_wrapper .domain_cont li span
+{
+  padding-left: 25px;
+  color: #9b9b9b;
+}
+@media (max-width: 767px)
+{
+  .domain_wrapper h2 
+  {
+    font-size: 32px;
+  }
+  .domain_wrapper .domain_cont 
+  {
+    margin-top: 60px;
+  }
+  .domain_wrapper .domain_cont li 
+  {
+    font-size: 16px;
+    line-height: 29px;
+  } 
+  .domain_wrapper 
+  {
+    padding: 0 0 90px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px)
+{  
+  .domain_wrapper .domain_cont li 
+  {
+    font-size: 15px;
+    line-height: 28px;
+  }
+  .domain_wrapper 
+  {
+    padding: 0 0 120px;
+  }
+}
+/* Domain Expertise Section Ends */

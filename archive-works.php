@@ -15,8 +15,8 @@
   $logos = acf_photo_gallery('logos', get_the_id());
   $project_case_studies = [
     get_field('project1', 116),
-    get_field('project2', 116),
     get_field('project3', 116),
+    get_field('project2', 116),
     get_field('project4', 116),
     get_field('project5', 116),
     get_field('project6', 116),
@@ -48,42 +48,42 @@
               $project_style = $project_styles[$i];
               $link_enabled = get_field('link_to_project_detail', $project->ID);
           ?>
-            <? if (isset($project_style['full-width']) && $project_style['full-width']) { ?>
+            <?php if (isset($project_style['full-width']) && $project_style['full-width']) { ?>
                 </div>
               </div>
 
-              <div class="<? echo $project_style['class'] ?> project full-width animate-once animate-in__fadeUp">
-                <? if ($link_enabled) { ?> <a href="<? echo get_permalink($project) ?>"> <? } ?>
-                  <div class="project-image" style="background-image: url(<? echo get_field('thumb_wide', $project->ID)['sizes']['project-thumb'] ?>)">
+              <div class="<?php echo $project_style['class'] ?> project full-width animate-once animate-in__fadeUp">
+                <?php if ($link_enabled) { ?> <a href="<?php echo get_permalink($project) ?>"> <?php } ?>
+                  <div class="project-image" style="background-image: url(<?php echo get_field('thumb_wide', $project->ID)['sizes']['project-thumb'] ?>)">
                     <div
                       class="project-image-hover"
-                      style="background-image: url(<? echo get_field('thumb_hover', $project->ID)['sizes']['project-thumb'] ?>);"
+                      style="background-image: url(<?php echo get_field('thumb_hover', $project->ID)['sizes']['project-thumb'] ?>);"
                     ></div>
                   </div>
-                  <div class="project-subheading"><? echo get_field('subheading', $project -> ID) ?></div>
-                  <div class="project-title"><? echo get_the_title($project) ?></div>
-                <? if ($link_enabled) { ?> </a> <? } ?>
+                  <div class="project-subheading"><?php echo get_field('subheading', $project -> ID) ?></div>
+                  <div class="project-title"><?php echo get_the_title($project) ?></div>
+                <?php if ($link_enabled) { ?> </a> <?php } ?>
               </div>
 
               <div class="row-wrapper">
                 <div class="row home-projects">
-            <? } else { ?>
-              <div class="<? echo $project_style['class'] ?> project-wrapper animate-once animate-in__fadeUp">
+            <?php } else { ?>
+              <div class="<?php echo $project_style['class'] ?> project-wrapper animate-once animate-in__fadeUp">
                 <div class="project">
-                  <? if ($link_enabled) { ?> <a href="<? echo get_permalink($project) ?>"> <? } ?>
-                    <div class="project-image" style="background-image: url(<? echo get_field('thumb', $project->ID)['sizes']['large'] ?>)">
+                  <?php if ($link_enabled) { ?> <a href="<?php echo get_permalink($project) ?>"> <?php } ?>
+                    <div class="project-image" style="background-image: url(<?php echo get_field('thumb', $project->ID)['sizes']['large'] ?>)">
                       <div
                         class="project-image-hover"
-                        style="background-image: url(<? echo get_field('thumb_hover', $project->ID)['sizes']['large'] ?>);"
+                        style="background-image: url(<?php echo get_field('thumb_hover', $project->ID)['sizes']['large'] ?>);"
                       ></div>
                     </div>
-                    <div class="project-subheading"><? echo get_field('subheading', $project -> ID) ?></div>
-                    <div class="project-title"><? echo get_the_title($project) ?></div>
-                  <? if ($link_enabled) { ?> </a> <? } ?>
+                    <div class="project-subheading"><?php echo get_field('subheading', $project -> ID) ?></div>
+                    <div class="project-title"><?php echo get_the_title($project) ?></div>
+                  <?php if ($link_enabled) { ?> </a> <?php } ?>
                 </div>
               </div>
-            <? } ?>
-          <? } ?>
+            <?php } ?>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -100,7 +100,7 @@
           <?php
             foreach ($projects as $project) {
           ?>
-            <?
+            <?php
               $height = get_field('height', $project->ID);
               $thumb_url = get_field('thumb', $project->ID)['sizes']['project-thumb'];
               $thumb_hover_url = get_field('thumb_hover', $project->ID)['sizes']['project-thumb'];
@@ -109,39 +109,39 @@
             ?>
             <div class="col-lg-4 col-md-6 col-sm-12 animate-once animate-in__fadeUp project-wrapper">
 
-              <div class="project project-work <? echo $height ?>">
-                <? if ($link_enabled) { ?> <a href="<? echo get_permalink($project) ?>"> <? } ?>
-                  <? if ($thumb_video_url) : ?>
+              <div class="project project-work <?php echo $height ?>">
+                <?php if ($link_enabled) { ?> <a href="<?php echo get_permalink($project) ?>"> <?php } ?>
+                  <?php if ($thumb_video_url) : ?>
                     <div
                       class="project-image"
                     >
                       <video
-                        class="project-video <? echo $height ?>"
+                        class="project-video <?php echo $height ?>"
                         autoplay muted playsinline loop
-                        src="<? echo $thumb_video_url ?>"
+                        src="<?php echo $thumb_video_url ?>"
                       ></video>
                       <div
                         class="project-image-hover"
-                        style="background-image: url(<? echo $thumb_hover_url ?>);"
+                        style="background-image: url(<?php echo $thumb_hover_url ?>);"
                       ></div>
                     </div>
-                  <? else : ?>
+                  <?php else : ?>
                     <div
                       class="project-image"
-                      style="background-image: url(<? echo $thumb_url ?>);"
+                      style="background-image: url(<?php echo $thumb_url ?>);"
                     >
                       <div
                         class="project-image-hover"
-                        style="background-image: url(<? echo $thumb_hover_url ?>);"
+                        style="background-image: url(<?php echo $thumb_hover_url ?>);"
                       ></div>
                     </div>
-                  <? endif; ?>
-                  <div class="project-subheading"><? echo get_field('subheading', $project -> ID) ?></div>
-                  <div class="project-title"><? echo $project -> post_title ?></div>
-                <? if ($link_enabled) { ?> </a> <? } ?>
+                  <?php endif; ?>
+                  <div class="project-subheading"><?php echo get_field('subheading', $project -> ID) ?></div>
+                  <div class="project-title"><?php echo $project -> post_title ?></div>
+                <?php if ($link_enabled) { ?> </a> <?php } ?>
               </div>
             </div>
-          <? } ?>
+          <?php } ?>
         </div>
       </div>
     </div>
